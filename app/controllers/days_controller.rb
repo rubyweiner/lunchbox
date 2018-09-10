@@ -4,20 +4,21 @@ class DaysController < ApplicationController
     render json: @day
   end
 
-  # def show
-  #   @grocery = Grocery.find(params[:id])
-  #   render json: @grocery
-  # end
+  def show
+    @day = Day.find(params[:id])
+    render json: @day
+  end
+
   #
   # def create
   #   @grocery = Grocery.create(grocery_params)
   #   render json: @grocery
   # end
   #
-  # def update
-  #   Grocery.find(params[:id]).update(grocery_params)
-  #   render json: Grocery.find(params[:id])
-  # end
+  def update
+    Day.find(params[:id]).update(day_params)
+    render json: Day.find(params[:id])
+  end
   #
   # def destroy
   #  render json: Grocery.find(params[:id]).destroy
@@ -25,8 +26,8 @@ class DaysController < ApplicationController
 
   private
 
-  def grocery_params
-    params.require(:day).permit(:name, :meal_name, :week_id)
+  def day_params
+    params.require(:day).permit(:name, :meal_name, :groceries)
   end
 
 end
