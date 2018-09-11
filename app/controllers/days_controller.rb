@@ -16,7 +16,7 @@ class DaysController < ApplicationController
   # end
   #
   def update
-    Day.find(params[:id]).update(day_params)
+    Day.find(params[:id]).update(groceries: day_params)
     render json: Day.find(params[:id])
   end
   #
@@ -27,7 +27,7 @@ class DaysController < ApplicationController
   private
 
   def day_params
-    params.require(:day).permit(:name, :meal_name, :groceries)
+    params.require(:day).permit(:name, :meal_name, :groceries => [:id, :name, :calories, :expiration_date, :img_url])
   end
 
 end

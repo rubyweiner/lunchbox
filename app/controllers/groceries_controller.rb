@@ -4,24 +4,26 @@ class GroceriesController < ApplicationController
     render json: @grocery
   end
 
-  # def show
-  #   @grocery = Grocery.find(params[:id])
-  #   render json: @grocery
-  # end
-  #
-  # def create
-  #   @grocery = Grocery.create(grocery_params)
-  #   render json: @grocery
-  # end
-  #
-  # def update
-  #   Grocery.find(params[:id]).update(grocery_params)
-  #   render json: Grocery.find(params[:id])
-  # end
-  #
-  # def destroy
-  #  render json: Grocery.find(params[:id]).destroy
-  # end
+  def show
+    @grocery = Grocery.find(params[:id])
+    render json: @grocery
+  end
+
+  def create
+    @grocery = Grocery.create(grocery_params)
+    render json: @grocery
+  end
+
+
+  def update
+    Grocery.find(params[:id]).update(day_id: params[:day_id])
+    render json: Grocery.find(params[:id])
+  end
+
+  
+  def destroy
+   render json: Grocery.find(params[:id]).destroy
+  end
 
   private
 
