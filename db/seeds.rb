@@ -22,7 +22,7 @@ Day.create([
 
 Grocery.create([
   {name: "Tomato", calories: 25, expiration_date: '2018-09-15', img_url: "https://media.istockphoto.com/photos/tomato-isolated-on-white-background-picture-id466175630?k=6&m=466175630&s=612x612&w=0&h=fu_mQBjGJZIliOWwCR0Vf2myRvKWyQDsymxEIi8tZ38=", user_id: 1, day_id: 1},
-  {name: "Mozzerella", calories: 300, expiration_date: '2018-09-18', img_url: "https://images-na.ssl-images-amazon.com/images/I/31khDX0tgyL._SY355_.jpg",  day_id: 1},
+  {name: "Mozzerella", calories: 300, expiration_date: '2018-09-18', img_url: "https://images-na.ssl-images-amazon.com/images/I/31khDX0tgyL._SY355_.jpg",  user_id: 1, day_id: 1},
   {name: "Pesto", calories: 150, expiration_date: '2018-10-12', img_url: "https://ll-us-i5.wal.co/asr/0e208c20-f469-4152-b761-534a49f62303_1.f108230e034702d4032f11c384feb416.jpeg-48ae0d138501428d0eb104eead34e4c21f17d7a0-optim-450x450.jpg?odnBg=FFFFFF", user_id: 1, day_id: 1},
   {name: "Salmon Fillet", calories: 200, expiration_date: '2018-09-17', img_url: "https://www.fishinabox.co.uk/wp-content/uploads/2016/09/Salmon-Fillet.jpg", user_id: 1, day_id: 2},
   {name: "Spinach", calories: 100, expiration_date: '2018-09-18', img_url: "https://static.meijer.com/Media/000/71430/0007143000964_1_A1C1_0600.png", user_id: 1, day_id: 2},

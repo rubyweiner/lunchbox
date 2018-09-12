@@ -16,11 +16,11 @@ class GroceriesController < ApplicationController
 
 
   def update
-    Grocery.find(params[:id]).update(day_id: params[:day_id])
+    Grocery.find(params[:id]).update(grocery_params)
     render json: Grocery.find(params[:id])
   end
 
-  
+
   def destroy
    render json: Grocery.find(params[:id]).destroy
   end
@@ -32,3 +32,4 @@ class GroceriesController < ApplicationController
   end
 
 end
+# day_id: params[:day_id]

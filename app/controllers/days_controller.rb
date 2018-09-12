@@ -9,20 +9,12 @@ class DaysController < ApplicationController
     render json: @day
   end
 
-  #
-  # def create
-  #   @grocery = Grocery.create(grocery_params)
-  #   render json: @grocery
-  # end
-  #
+
   def update
-    Day.find(params[:id]).update(groceries: day_params)
+    Day.find(params[:id]).update(day_params)
     render json: Day.find(params[:id])
   end
-  #
-  # def destroy
-  #  render json: Grocery.find(params[:id]).destroy
-  # end
+
 
   private
 
